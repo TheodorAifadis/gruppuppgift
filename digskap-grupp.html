@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: Comic Sans MS;}
+
+
+.tab {
+overflow: hidden;
+border: 1px solid rgb(0, 0, 0);
+background-color: #d39b9b;
+}
+
+
+.tab button {
+background-color: inherit;
+float: center;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+font-size: 17px;
+}
+
+
+.tab button:hover {
+background-color: rgb(158, 158, 240);
+}
+
+
+.tab button.active {
+background-color: rgb(142, 142, 226);
+}
+
+
+.tabcontent {
+display: none;
+padding: 6px 12px;
+border: 1px solid black;
+border-top: none;
+}
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="digskap-grupp.css" media="screen" />
+
+<h2>lol</h2>
+
+<h3>Epic Website</h2>
+
+<div class="tab">
+<button class="tablinks" onclick="openCity(event, 'Videos')">Videos</button>
+<button class="tablinks" onclick="openCity(event, 'Pictures')">Pictures</button>
+<button class="tablinks" onclick="openCity(event, 'Game')">Game</button>
+</div>
+
+<div id="Videos" class="tabcontent">
+<h4>Some videos that we have created:</h3>
+<p>gg</p>
+</div>
+
+<div id="Pictures" class="tabcontent">
+<h4>Some pictures that we have created:</h3>
+<p>gg</p>
+
+</div>
+
+<div id="Game" class="tabcontent">
+<h4>Slåpe:</h3>
+<a href="https://theodor1223.itch.io/slpe">Click here to play the game</a>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
